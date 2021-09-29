@@ -11,7 +11,7 @@ Note: Due to the "demo" nature of the application, it's feature-set is quite bas
 ## Download
 ---
 
-Download the latest release from the releases page.
+Download the [latest release](https://github.com/trigonated/GameCollection/releases/download/v1.0/GameCollection-demo_1_0.apk) from the releases page.
 
 Note: You might need to enable [installation of apps from unknown sources](https://www.wikihow.com/Allow-Apps-from-Unknown-Sources-on-Android) before you can install this application.
 
