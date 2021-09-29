@@ -1,8 +1,8 @@
 # Game Collection
 
-![Home page](documentation\images\screenshot_home_wishlist.png "Home page")
-![Game details](documentation\images\screenshot_details.png "Home details")
-![Owned status](documentation\images\screenshot_status.png "Owned status")
+![Home page](documentation/images/screenshot_home_wishlist.png "Home page")
+![Game details](documentation/images/screenshot_details.png "Home details")
+![Owned status](documentation/images/screenshot_status.png "Owned status")
 
 A demo application made using a modern Android stack, inspired by [Android Sunflower](https://github.com/android/sunflower). It's an application to manage a video-game collection, supporting both storing a list of "owned games", and a "wishlist".
 
