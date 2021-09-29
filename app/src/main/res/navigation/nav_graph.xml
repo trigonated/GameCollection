@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.trigonated.gamecollection.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_GameDetailsFragment"
+            app:destination="@id/GameDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_HomeFragment_to_SearchFragment"
+            app:destination="@id/SearchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_HomeFragment_to_AboutFragment"
+            app:destination="@id/AboutFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/GameDetailsFragment"
+        android:name="com.trigonated.gamecollection.ui.gamedetails.GameDetailsFragment"
+        android:label="Game Details"
+        tools:layout="@layout/fragment_gamedetails">
+
+        <argument
+            android:name="gameId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_GameDetailsFragment_to_GameCollectionStatusFragment"
+            app:destination="@id/GameCollectionStatusFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/GameCollectionStatusFragment"
+        android:name="com.trigonated.gamecollection.ui.gamecollectionstatus.GameCollectionStatusFragment"
+        android:label="Game Collection Status"
+        tools:layout="@layout/fragment_gamecollectionstatus">
+
+        <argument
+            android:name="gameId"
+            app:argType="string" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="com.trigonated.gamecollection.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+
+        <argument
+            android:name="query"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_SearchFragment_to_GameDetailsFragment"
+            app:destination="@id/GameDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AboutFragment"
+        android:name="com.trigonated.gamecollection.ui.about.AboutFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_about" />
+</navigation>

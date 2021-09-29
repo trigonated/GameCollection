@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.trigonated.gamecollection.ui.gamedetails.GameDetailsViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.MainActivity"
+        tools:ignore="MergeRootFrame">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gamedetails_appbar_background_image_size"
+            android:animateLayoutChanges="true"
+            android:background="?attr/colorSurface"
+            android:fitsSystemWindows="true"
+            android:stateListAnimator="@animator/show_toolbar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:collapsedTitleGravity="left"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:statusBarScrim="?attr/colorSurface"
+                app:title="@{viewModel.game.name}"
+                app:titleEnabled="false"
+                app:toolbarId="@id/toolbar">
+                <!--                app:collapsedTitleTextAppearance="@style/TextAppearance.GameCollection.Toolbar.Text"-->
+
+                <com.trigonated.gamecollection.ui.generic.GameImageView
+                    android:id="@+id/background_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gamedetails_appbar_background_image_size"
+                    android:background="?attr/colorPrimary"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"
+                    app:srcUrlAppBarStyle="@{viewModel.game.imageUrl}" />
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:layout_collapseMode="pin"
+                    app:menu="@menu/menu_gamedetails"
+                    app:navigationIcon="@drawable/ic_action_back"
+                    app:popupTheme="@style/Theme.GameCollection.PopupOverlay"
+                    app:titleTextColor="?attr/colorOnSurface" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/game_detail_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/padding_extra_large"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/loading_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:isVisible="@{viewModel.isLoading}">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_marginTop="@dimen/margin_extra_extra_large" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/error_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:isVisible="@{viewModel.isError}">
+
+                    <TextView
+                        style="?android:attr/textAppearanceMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_marginTop="@dimen/margin_extra_extra_large"
+                        android:text="@string/gamedetails_error_could_not_load_the_game" />
+                </FrameLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/loaded_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/padding_extra_large"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    app:isVisible="@{viewModel.isLoaded}">
+
+                    <TextView
+                        android:id="@+id/game_name_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:text="@{viewModel.game.name}"
+                        android:textAppearance="?attr/textAppearanceHeadline4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Game name" />
+
+                    <TextView
+                        android:id="@+id/game_publisher_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:text="@{viewModel.game.publisher}"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        app:isVisible="@{viewModel.game.publisher != null}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/game_name_text"
+                        tools:text="Publisher name" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/game_platforms_chips"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/game_publisher_text"
+                        tools:layout_height="48dp" />
+
+                    <TextView
+                        android:id="@+id/game_description_text"
+                        style="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:textIsSelectable="true"
+                        app:htmlText="@{viewModel.game.description ?? @string/gamedetails_no_description}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/game_platforms_chips"
+                        tools:text="Game description" />
+
+                    <com.trigonated.gamecollection.ui.generic.SourceButton
+                        android:id="@+id/source_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="start|center_vertical"
+                        android:padding="@dimen/margin_small"
+                        android:text="@string/generic_source_rawg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/game_description_text" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="@dimen/margin_large"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:translationY="@dimen/margin_large"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="10dp"
+            app:isVisible="@{viewModel.isLoaded}"
+            app:layout_anchor="@id/app_bar_layout"
+            app:layout_anchorGravity="bottom|start"
+            app:layout_behavior=".ui.misc.GameImageCardBehavior">
+
+            <com.trigonated.gamecollection.ui.generic.GameImageView
+                android:id="@+id/game_image"
+                android:layout_width="@dimen/gamedetails_game_image_size"
+                android:layout_height="@dimen/gamedetails_game_image_size"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="1:1"
+                app:srcUrl="@{viewModel.game.imageUrl}"
+                tools:src="@mipmap/ic_launcher" />
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:onClick="@{() -> viewModel.showGameCollectionStatus()}"
+            android:tint="@android:color/white"
+            app:isVisible="@{viewModel.isLoaded}"
+            app:layout_anchor="@id/app_bar_layout"
+            app:layout_anchorGravity="bottom|end"
+            app:srcCompat="@drawable/ic_action_collectionstatus" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

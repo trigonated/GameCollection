@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Game Collection</string>
+    <!-- Generic -->
+    <string name="generic_error_occurred">An error occurred</string>
+    <string name="generic_no_data">No data to show</string>
+    <string name="generic_source_rawg">Source: RAWG</string>
+    <!-- Actions -->
+    <string name="action_wishlist">Wishlist</string>
+    <string name="action_collection">Collection</string>
+    <string name="action_share">Share</string>
+    <string name="action_open_in_browser">Open in browser</string>
+    <string name="action_search">Search</string>
+    <string name="action_about">About</string>
+    <!-- Home -->
+    <string name="home_no_games">No games\nTry searching for some to add</string>
+    <!-- GameDetails -->
+    <string name="gamedetails_no_description">No description</string>
+    <string name="gamedetails_error_could_not_load_the_game">Could not load the game</string>
+    <!-- Search -->
+    <string name="search_title">Search</string>
+    <string name="search_no_results">No results</string>
+    <string name="search_search_hint">Search</string>
+    <!-- About -->
+    <string name="about_title">About</string>
+    <string name="about_github">GitHub</string>
+    <string name="about_rawg">Game data provided by RAWG</string>
+</resources>

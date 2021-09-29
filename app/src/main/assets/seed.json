@@ -1,0 +1,308 @@
+{
+  "games": [
+    {
+      "id": "ratcher-clank-rift-apart",
+      "url": "https://rawg.io/games/ratcher-clank-rift-apart",
+      "name": "Ratchet & Clank: Rift Apart",
+      "imageUrl": "https://media.rawg.io/media/games/9ee/9eee31c8ec10b90ee6940a9b95736f88.jpg",
+      "description": "<p>BLAST YOUR WAY THROUGH AN INTERDIMENSIONAL ADVENTURE<br /> The intergalactic adventurers are back with a bang. Help them stop a robotic emperor intent on conquering cross-dimensional worlds, with their own universe next in the firing line.<br /> - Blast your way home with an arsenal of outrageous weaponry.<br /> - Experience the shuffle of dimensional rifts and dynamic gameplay.<br /> - Explore never-before-seen planets and alternate dimension versions of old favorites.</p>",
+      "publisher": null
+    },
+    {
+      "id": "minecraft",
+      "url": "https://rawg.io/games/minecraft",
+      "name": "Minecraft",
+      "imageUrl": "https://media.rawg.io/media/games/b4e/b4e4c73d5aa4ec66bbf75375c4847a2b.jpg",
+      "description": "<p>One of the most popular games of the 2010s, Minecraft allows you to rebuild the environment around you. The world of the game is open, infinitely wide, and procedurally generated. It is composed of small 3D cubes that represent specific types of materials or terrain. The gameplay is centered on mining and building various structures of your choice. You can also craft items like tools, weapons, and armor. There&#39;s an option to shift to the first or the third person view.<br /> Minecraft includes multiple modes that dramatically change the focus of the game. Survival and Adventure modes require the player to gather resources, hunt for food and fight monsters to survive. In the Hardcore mode, there’s even permanent death. Creative mode, by contrast, offers you to freely explore the world and construct whatever you want with unlimited resources. There’s also a multiplayer mode that allows the players to share their worlds and engage in the traditional MMO activities, such as player-vs-player combat.<br /> Minecraft’s crude visual style, reminiscent of Lego cubes, became an iconic part of the popular culture. There are many myths and fan fiction surrounding the game, such as the legend of Herobrine, a rumored character that officially doesn’t exist.</p>",
+      "publisher": null
+    },
+    {
+      "id": "trackmania-2020",
+      "url": "https://rawg.io/games/trackmania-2020",
+      "name": "TrackMania (2020)",
+      "imageUrl": "https://media.rawg.io/media/games/f30/f302e10098eddb41ccea480b189746bc.jpg",
+      "description": "<p>Ubisoft Nadeo returns with the biggest and most compelling remake of the legendary Trackmania Nations.<br /> In Trackmania you will discover a brand new virtual formula, a sports-oriented stadium, new creation blocks and extra game features.</p>",
+      "publisher": null
+    },
+    {
+      "id": "age-of-empires-iv",
+      "url": "https://rawg.io/games/age-of-empires-iv",
+      "name": "Age of Empires IV",
+      "imageUrl": "https://media.rawg.io/media/games/23e/23e45acbf29bd241913ddcf5cf4053d5.jpg",
+      "description": "<p>Age of Empires IV is a strategy game developed by Relic Entertainment. It is set to come out in 2021. It is set to be published by Microsoft Studios. The game is rated as \"Exceptional\" on RAWG. <br>Age of Empires IV is available on PC. You can purchase the game on Steam. </p> <p></p>",
+      "publisher": null
+    },
+    {
+      "id": "animal-crossing-2019",
+      "url": "https://rawg.io/games/animal-crossing-2019",
+      "name": "Animal Crossing: New Horizons",
+      "imageUrl": "https://media.rawg.io/media/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+      "description": "<p>If the hustle and bustle of modern life’s got you down, Tom Nook has a new business venture up his sleeve that he knows you’ll adore: the Nook Inc. Deserted Island Getaway Package! Sure, you’ve crossed paths with colorful characters near and far. Had a grand time as one of the city folk. May’ve even turned over a new leaf and dedicated yourself to public service! But deep down, isn’t there a part of you that longs for…freedom? Then perhaps a long walk on the beach of a deserted island, where a rich wealth of untouched nature awaits, is just what the doctor ordered!</p> <p>Peaceful creativity and charm await as you roll up your sleeves and make your new life whatever you want it to be. Collect resources and craft everything from creature comforts to handy tools. Embrace your green thumb as you interact with flowers and trees in new ways. Set up a homestead where the rules of what goes indoors and out no longer apply. Make friends with new arrivals, enjoy the seasons, pole-vault across rivers as you explore, and more!</p>",
+      "publisher": null
+    }
+  ],
+  "platforms": [
+    {
+      "id": "pc",
+      "name": "PC"
+    },
+    {
+      "id": "playstation5",
+      "name": "PlayStation 5"
+    },
+    {
+      "id": "playstation4",
+      "name": "PlayStation 4"
+    },
+    {
+      "id": "xbox-one",
+      "name": "Xbox One"
+    },
+    {
+      "id": "xbox-series-x",
+      "name": "Xbox Series S/X"
+    },
+    {
+      "id": "nintendo-switch",
+      "name": "Nintendo Switch"
+    },
+    {
+      "id": "ios",
+      "name": "iOS"
+    },
+    {
+      "id": "android",
+      "name": "Android"
+    },
+    {
+      "id": "nintendo-3ds",
+      "name": "Nintendo 3DS"
+    },
+    {
+      "id": "nintendo-ds",
+      "name": "Nintendo DS"
+    },
+    {
+      "id": "nintendo-dsi",
+      "name": "Nintendo DSi"
+    },
+    {
+      "id": "macos",
+      "name": "macOS"
+    },
+    {
+      "id": "linux",
+      "name": "Linux"
+    },
+    {
+      "id": "xbox360",
+      "name": "Xbox 360"
+    },
+    {
+      "id": "xbox-old",
+      "name": "Xbox"
+    },
+    {
+      "id": "playstation3",
+      "name": "PlayStation 3"
+    },
+    {
+      "id": "playstation2",
+      "name": "PlayStation 2"
+    },
+    {
+      "id": "playstation1",
+      "name": "PlayStation"
+    },
+    {
+      "id": "ps-vita",
+      "name": "PS Vita"
+    },
+    {
+      "id": "psp",
+      "name": "PSP"
+    },
+    {
+      "id": "wii-u",
+      "name": "Wii U"
+    },
+    {
+      "id": "wii",
+      "name": "Wii"
+    },
+    {
+      "id": "gamecube",
+      "name": "GameCube"
+    },
+    {
+      "id": "nintendo-64",
+      "name": "Nintendo 64"
+    },
+    {
+      "id": "game-boy-advance",
+      "name": "Game Boy Advance"
+    },
+    {
+      "id": "game-boy-color",
+      "name": "Game Boy Color"
+    },
+    {
+      "id": "game-boy",
+      "name": "Game Boy"
+    },
+    {
+      "id": "snes",
+      "name": "SNES"
+    },
+    {
+      "id": "nes",
+      "name": "NES"
+    },
+    {
+      "id": "macintosh",
+      "name": "Classic Macintosh"
+    },
+    {
+      "id": "apple-ii",
+      "name": "Apple II"
+    },
+    {
+      "id": "commodore-amiga",
+      "name": "Commodore / Amiga"
+    },
+    {
+      "id": "atari-7800",
+      "name": "Atari 7800"
+    },
+    {
+      "id": "atari-5200",
+      "name": "Atari 5200"
+    },
+    {
+      "id": "atari-2600",
+      "name": "Atari 2600"
+    },
+    {
+      "id": "atari-flashback",
+      "name": "Atari Flashback"
+    },
+    {
+      "id": "atari-8-bit",
+      "name": "Atari 8-bit"
+    },
+    {
+      "id": "atari-st",
+      "name": "Atari ST"
+    },
+    {
+      "id": "atari-lynx",
+      "name": "Atari Lynx"
+    },
+    {
+      "id": "atari-xegs",
+      "name": "Atari XEGS"
+    }
+  ],
+  "gamePlatforms": [
+    {
+      "gameId": "ratcher-clank-rift-apart",
+      "platformId": "playstation5"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "xbox-one"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "playstation3"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "ios"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "linux"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "nintendo-3ds"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "wii-u"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "xbox360"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "ps-vita"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "pc"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "macos"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "nintendo-switch"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "playstation4"
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "android"
+    },
+    {
+      "gameId": "trackmania-2020",
+      "platformId": "pc"
+    },
+    {
+      "gameId": "age-of-empires-iv",
+      "platformId": "pc"
+    },
+    {
+      "gameId": "animal-crossing-2019",
+      "platformId": "nintendo-switch"
+    }
+  ],
+  "gameCollectionStatuses": [
+    {
+      "gameId": "ratcher-clank-rift-apart",
+      "platformId": "playstation5",
+      "owned": false,
+      "wishlisted": true
+    },
+    {
+      "gameId": "minecraft",
+      "platformId": "pc",
+      "owned": false,
+      "wishlisted": true
+    },
+    {
+      "gameId": "trackmania-2020",
+      "platformId": "pc",
+      "owned": true,
+      "wishlisted": false
+    },
+    {
+      "gameId": "age-of-empires-iv",
+      "platformId": "pc",
+      "owned": true,
+      "wishlisted": false
+    },
+    {
+      "gameId": "animal-crossing-2019",
+      "platformId": "nintendo-switch",
+      "owned": false,
+      "wishlisted": true
+    }
+  ]
+}

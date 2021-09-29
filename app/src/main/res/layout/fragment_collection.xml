@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.trigonated.gamecollection.ui.home.collection.CollectionViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.trigonated.gamecollection.ui.generic.DataStatusView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:hasData="@{viewModel.hasData}"
+            app:noDataText="@string/home_no_games"
+            app:status="@{viewModel.loadingStatus}">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/padding_normal"
+                android:paddingTop="@dimen/padding_large"
+                android:paddingEnd="@dimen/padding_normal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="@integer/game_list_span_count"
+                tools:listitem="@layout/list_item_game" />
+        </com.trigonated.gamecollection.ui.generic.DataStatusView>
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/wishlist"
+        android:enabled="true"
+        android:icon="@drawable/ic_wishlist_tab"
+        android:title="@string/action_wishlist" />
+    <item
+        android:id="@+id/collection"
+        android:enabled="true"
+        android:icon="@drawable/ic_collection_tab"
+        android:title="@string/action_collection" />
+</menu>
